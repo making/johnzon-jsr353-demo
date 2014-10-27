@@ -1,0 +1,6 @@
+language: java
+jdk:
+  - oraclejdk8
+script:
+  - mvn test -f johnzon-jsr353-jaxrs/pom.xml
+  - mvn test -f johnzon-jsr353-springmvc/pom.xml
