@@ -10,7 +10,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import static com.jayway.restassured.RestAssured.when;
+import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,7 +28,11 @@ public class HelloResourceTest {
 
     @Test
     public void testHello() throws Exception {
-        when().get("/").then()
+
+        given().header("Accept", "application/json")
+                .log().all()
+                .when().get("/").then()
+                .log().all()
                 .body("name", is("@making"))
                 .body("age", is(18));
     }
