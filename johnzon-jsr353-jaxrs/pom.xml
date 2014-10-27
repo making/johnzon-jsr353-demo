@@ -87,14 +87,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-        <pluginRepository>
-            <id>apache</id>
-            <name>Apache</name>
-            <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
     </pluginRepositories>
     <build>
         <plugins>
